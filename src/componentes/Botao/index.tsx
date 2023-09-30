@@ -2,6 +2,7 @@ import { Button } from "native-base";
 
 interface BotaoProps {
     texto: string
+    onPress: () => void
 }
 
 export default function Botao({texto, ...rest}: BotaoProps) {

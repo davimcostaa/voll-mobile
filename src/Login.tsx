@@ -14,10 +14,12 @@ export default function Login({navigation}) {
       </Titulo>
       <Box> 
       <EntradaTexto
+        mt={3}
         label="Email"
         placeholder="Insira seu endereço de e-mail"
       />
       <EntradaTexto
+        mt={3}
         label="Senha"
         placeholder="Insira sua senha"
       />

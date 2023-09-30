@@ -1,13 +1,14 @@
 import { FormControl, Input } from "native-base"
 
 interface EntradaTextoProps {
-    label: string
+    label?: string
     placeholder: string
+    mt?: number
 }
 
-function EntradaTexto({label, placeholder, ...rest}: EntradaTextoProps) {
+function EntradaTexto({label, placeholder, mt, ...rest}: EntradaTextoProps) {
   return (
-    <FormControl mt={3}>
+    <FormControl mt={mt}>
     <FormControl.Label>{label}</FormControl.Label>
     <Input 
       placeholder={placeholder}

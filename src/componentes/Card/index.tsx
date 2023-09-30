@@ -7,7 +7,7 @@ interface CardProps {
     especialidade: string
     data?: string
     foiAtendido?: boolean 
-    foiAgendado: boolean
+    foiAgendado?: boolean
 }
 
 const CardConsulta = ({nome, foto, data, especialidade, foiAgendado, foiAtendido}: CardProps) => {
@@ -18,7 +18,7 @@ const CardConsulta = ({nome, foto, data, especialidade, foiAgendado, foiAtendido
             <VStack paddingLeft="4">
                 <Text fontSize='md' fontWeight="bold">{nome}</Text>
                 <Text>{especialidade}</Text>
-                <Text>{data}:zap:</Text>
+                <Text>{data}</Text>
             </VStack>  
         </VStack>
 
