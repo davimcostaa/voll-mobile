@@ -1,6 +1,5 @@
 import api from "./Api"
 
-
 export async function fazerLogin(email: string, senha: string) {
     if (!email || !senha) return null
     try {
