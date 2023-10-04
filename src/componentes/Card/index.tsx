@@ -8,9 +8,10 @@ interface CardProps {
     data?: string
     foiAtendido?: boolean 
     foiAgendado?: boolean
+    onPress?: () => void
 }
 
-const CardConsulta = ({nome, foto, data, especialidade, foiAgendado, foiAtendido}: CardProps) => {
+const CardConsulta = ({nome, foto, data, especialidade, foiAgendado, foiAtendido, onPress}: CardProps) => {
   return (
     <VStack w='100%' bg={foiAtendido ? 'blue.100' : 'white'} p='5' borderRadius='lg' mb='5' shadow='2'>
         <VStack flexDir="row">
@@ -22,7 +23,7 @@ const CardConsulta = ({nome, foto, data, especialidade, foiAgendado, foiAtendido
             </VStack>  
         </VStack>
 
-        <Botao mt='4' texto={foiAgendado ? 'Cancelar' : 'Agendar consulta'} />
+        <Botao mt='4' texto={foiAgendado ? 'Cancelar' : 'Agendar consulta'} onPress={onPress} />
     </VStack>
   )
 }
